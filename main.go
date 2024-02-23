@@ -1,14 +1,13 @@
 package main
 
 import (
-	"github.com/gin-gonic/gin"
+	"fmt"
+
+	numbergoodpair "github.com/thuanpham98/get-go/number-good-pair"
 )
 
 func main() {
+	var ret = numbergoodpair.NumberGoodPair([1,1,3,4,4,3,5,6]);
+	fmt.Println(ret);
 
-	gin.SetMode(gin.DebugMode)
-
-	r := gin.Default()
-	r.GET("/", func(ctx *gin.Context) { ctx.JSON(200, gin.H{"message": "pong"}) })
-	r.Run("localhost:6969")
 }
